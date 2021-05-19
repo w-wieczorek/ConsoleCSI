@@ -2,30 +2,25 @@
 
 open System
 open Parsing
+open GA
 open System.Collections.Generic
 
-(* A grammar that generates (a b^m)^m, m >= 1.
-   It is context-sensitive.
- *)
-let createGrammar3 () =
-    let S = Nonterminal(0) :> Symbol
-    let A = Nonterminal(1) :> Symbol
-    let D = Nonterminal(2) :> Symbol
-    let T = Nonterminal(3) :> Symbol
-    let a = Terminal('a') :> Symbol
-    let b = Terminal('b') :> Symbol
-    Type1Grammar(SortedSet [{lhs = [S]; rhs = [D; T; A]};
-                            {lhs = [S]; rhs = [a; b]};
-                            {lhs = [T]; rhs = [D; T; a]};
-                            {lhs = [T]; rhs = [D; a]};
-                            {lhs = [D; a]; rhs = [a; b; D]};
-                            {lhs = [D; b]; rhs = [b; D]};
-                            {lhs = [D; A]; rhs = [A; b]};
-                            {lhs = [A]; rhs = [a]}], S :?> Nonterminal)
 [<EntryPoint>]
 let main argv =
-    let g = createGrammar3 ()
-    let actual = g.language() |> Seq.take 5 |> List.ofSeq
-    printfn $"{g}"
-    printf $"{actual}"
+    let parameters = {
+        pop_size = 200;
+        tournament_size = 3;
+        p_mutation = 0.01;
+        iterations = 10000;
+        verbose = 500;
+        rnd = Random();
+        grammar_size = 6;
+        variables = 4;
+        alphabet = ['a'; 'b'];
+        examples = SortedSet ["ab"; "aabb"; "aaabbb"]
+        counterexamples = SortedSet ["a"; "b"; "aa"; "bb"; "ba"; "abb"; "bba"; "abab"]
+    }
+    let grammar, bar = runGA parameters
+    printfn $"{grammar}"
+    printfn $"\nwith bar = {bar}"
     0 // return an integer exit code
