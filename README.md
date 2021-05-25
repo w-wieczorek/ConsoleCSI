@@ -19,8 +19,8 @@ let parameters = {
     pop_size = 200;
     tournament_size = 3;
     p_mutation = 0.01;
-    iterations = 100;
-    verbose = 20;
+    iterations = 10000;
+    verbose = 500;
     rnd = Random();
     grammar_size = 6;
     variables = 4;
@@ -69,7 +69,7 @@ type GAParams = {
     p_mutation : float;
 
     // Number of evaluations for GA (e.g. if the population size is 200 then one iteration
-    // is 200 evaluation, hence 2000 is 10 iterations in the classical meaning of an iteration).
+    // is 200 evaluations, hence 2000 evaluations is 10 iterations in the classical meaning of an iteration).
     iterations : int;
 
     // If the verbose is set more than zero then the program will print the best individual
@@ -79,13 +79,13 @@ type GAParams = {
     // Radomizer for genetic operators (the crossover and mutation), it must be the `Random` type.
     rnd : Random;
 
-    // ...
+    // Expected size of a grammar as the number of rules.
     grammar_size : int;
 
-    // ...
+    // The number variables in the induced grammar (non-terminal symbols).
     variables : int;
 
-    // ...
+    // Terminal symbols in the induced grammar.
     alphabet : char list;
 
     // The list of words that should be accepted by the induced grammar.
@@ -98,6 +98,6 @@ type GAParams = {
 
 ## Difference between the steady state genetic algorithm and the generational genetic algorithm
 
-> The steady state GA is a simpler version of the generational one and in it two parents are selected and crossed obtaining two offspring that are mutated and inserted in the population, whereas in the generational version a large portion of the population is selected and crossed (typically half the individuals), the resulting offspring is mutated and inserted into the population, thus replacing the old individuals.
+> The steady state GA is a simpler version of the generational one and in it two parents are selected and crossed obtaining an offspring that are mutated and inserted in the population, whereas in the generational version a large portion of the population is selected and crossed (typically half the individuals), the resulting offspring is mutated and inserted into the population, thus replacing the old individuals.
 >
 > -- <cite>Andreu Sancho-Asensio, Universitat Ramon Llull</cite>
