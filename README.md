@@ -1,6 +1,6 @@
 # Context-Sensitive Grammar Induction by Genetic Search
 
-This repository contains the genetic algorithm for context-sensitive grammar induction. Please read the presentation of the library below.
+This repository contains the genetic algorithm for context-sensitive language induction. Please read the presentation of the library below.
 
 ## Quick presentation
 
