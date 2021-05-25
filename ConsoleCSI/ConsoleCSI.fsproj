@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>preview</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>WojciechWieczorek.ContextSensitiveGrammarInduction.GeneticSearch</PackageId>
+    <PackageId>ContextSensitiveGrammarInduction.GeneticSearch</PackageId>
     <Authors>Wojciech Wieczorek</Authors>
     <Company />
     <Product>Context-Sensitive Grammar Induction by Genetic Search</Product>
