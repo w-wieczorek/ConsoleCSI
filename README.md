@@ -12,7 +12,7 @@ The library uses the steady state genetic algorithm (see the description below).
 
 You can install the library as the NuGet package, search the phrase: `ContextSensitiveGrammarInduction.GeneticSearch` and use the version `1.0.1` (package source: nuget.org).
 
-## Example of usage
+## Example of usage (F#)
 
 ```fsharp
 open System
@@ -58,6 +58,31 @@ V2 V0 -> V1 V1
 
 
 with bar = 0,7708333333333334
+```
+
+## Example of usage (C#)
+
+```csharp
+using System;
+using System.Collections.Generic;
+using Microsoft.FSharp.Collections;
+...
+GA.GAParams parameters = new GA.GAParams(
+    pop_size: 50,
+    tournament_size: 3,
+    p_mutation: 0.01,
+    iterations: 1000,
+    verbose: 200,
+    rnd: new Random(),
+    grammar_size: 5,
+    variables: 3,
+    alphabet: ListModule.OfSeq(new List<char> { 'a', 'b' }),
+    examples: new SortedSet<string>() { "ab", "aabb", "aaabbb"},
+    counterexamples: new SortedSet<string>() {"a", "b", "aa", "bb", "ba", "abb", "bba", "abab"}
+);
+var (grammar, bestBar) = GA.runGA(parameters);
+Console.WriteLine(grammar);
+Console.WriteLine("with bar = " + bestBar);
 ```
 
 ## Documentation
