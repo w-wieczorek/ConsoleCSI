@@ -15,6 +15,7 @@
     <PackageTags>context-sensitive grammar induction, genetic search, grammar induction</PackageTags>
     <NeutralLanguage>Angielski</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>Libary that contains the genetic algorithm for context sensitive grammar induction.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
