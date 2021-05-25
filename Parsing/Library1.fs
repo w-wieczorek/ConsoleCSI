@@ -10,6 +10,12 @@ type Symbol () =
             match yObj with
             | :? Symbol as y -> x.name.CompareTo y.name
             | _ -> failwith "incompatible types"
+    override x.GetHashCode() =
+        hash (x.name)
+    override x.Equals(y) =
+        match y with
+        | :? Symbol as y -> x.name = y.name
+        | _ -> false
 
 type Terminal (c : char) =
     inherit Symbol ()

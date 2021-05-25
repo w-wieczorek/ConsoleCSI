@@ -37,3 +37,7 @@ let ``Grammar from numbers `` () =
     Assert.That(actual.Rules.Contains(r3), Is.True, "r3 has to be inside")
     Assert.That(actual.Rules.Contains(r4), Is.True, "r4 has to be inside")
     Assert.That(actual.Rules.Contains(r5), Is.True, "r5 has to be inside")
+
+[<EntryPoint>] 
+let main argv =
+    0

@@ -109,3 +109,7 @@ let ``Language for g3 `` () =
     let expected = ["ab"; "abbabb"]
     let actual = g3.language() |> Seq.take 2 |> List.ofSeq
     Assert.That(actual, Is.EqualTo expected, "Wrong Language 3.")
+
+[<EntryPoint>] 
+let main argv =
+    0

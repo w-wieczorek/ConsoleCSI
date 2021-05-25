@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Parsing\Parsing.fsproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.1" />
+  </ItemGroup>
+
 </Project>
