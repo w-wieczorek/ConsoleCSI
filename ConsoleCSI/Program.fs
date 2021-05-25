@@ -8,7 +8,7 @@ open System.Collections.Generic
 [<EntryPoint>]
 let main argv =
     let parameters = {
-        pop_size = 1000;
+        pop_size = 50;
         tournament_size = 3;
         p_mutation = 0.01;
         iterations = 1000;

@@ -16,7 +16,7 @@ You can install the library as the NuGet package, search the phrase: `ContextSen
 
 ```fsharp
 let parameters = {
-    pop_size = 1000;
+    pop_size = 50;
     tournament_size = 3;
     p_mutation = 0.01;
     iterations = 1000;
