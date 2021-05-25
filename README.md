@@ -7,6 +7,10 @@ This repository contains the genetic algorithm for context-sensitive grammar ind
 The library contains two main modules: `Parsing` and `GA`. The former represents [a Type-1 grammar](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Type-1_grammars) alongside helper functions.
 The latter is the implementation of [a genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) with all required [genetic operators](https://en.wikipedia.org/wiki/Genetic_algorithm#Genetic_operators).
 
+## Installation
+
+You can install the library as the NuGet package, search the phrase: `ContextSensitiveGrammarInduction.GeneticSearch` (package source: nuget.org).
+
 ## Example of usage
 
 ```fsharp
