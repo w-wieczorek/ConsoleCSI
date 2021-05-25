@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GA\GA.fsproj" />
+    <ProjectReference Include="..\ConsoleCSI\ConsoleCSI.fsproj" />
   </ItemGroup>
 
   <ItemGroup>

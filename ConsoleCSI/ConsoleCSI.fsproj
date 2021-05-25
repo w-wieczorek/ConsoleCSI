@@ -16,15 +16,19 @@
     <NeutralLanguage>Angielski</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>Libary that contains the genetic algorithm for context sensitive grammar induction.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Library1.fs" />
+    <Compile Include="Library.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GA\GA.fsproj" />
-    <ProjectReference Include="..\Parsing\Parsing.fsproj" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="4.15.0" />
   </ItemGroup>
 
   <ItemGroup>
