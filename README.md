@@ -86,10 +86,10 @@ type GAParams = {
     // ...
     alphabet : char list;
 
-    // The list of words that should be accepted by the result grammar.
+    // The list of words that should be accepted by the induced grammar.
     examples : SortedSet<string>;
 
-    // The list of words that should not be accepted by the result grammar.
+    // The list of words that should not be accepted by the induced grammar.
     counterexamples : SortedSet<string>
 }
 ```
