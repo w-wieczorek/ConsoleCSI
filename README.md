@@ -1,11 +1,11 @@
 # Context-Sensitive Grammar Induction by Genetic Search
 
-This repository contains the genetic algorithm for context sensitive grammar induction. Please read the presentation of the library below.
+This repository contains the genetic algorithm for context-sensitive grammar induction. Please read the presentation of the library below.
 
 ## Quick presentation
 
-The library contains two main modules: `Parsing` and `GA`. The former represents [a Type-1 grammar](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Type-1_grammars) alongside with helper functions.
-The latter is the implementaytion of [a genenetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) with all required [genetic operators](https://en.wikipedia.org/wiki/Genetic_algorithm#Genetic_operators).
+The library contains two main modules: `Parsing` and `GA`. The former represents [a Type-1 grammar](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Type-1_grammars) alongside helper functions.
+The latter is the implementation of [a genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) with all required [genetic operators](https://en.wikipedia.org/wiki/Genetic_algorithm#Genetic_operators).
 
 ## Example of usage
 
@@ -44,7 +44,7 @@ with bar = 0,4375
 
 ## Documentation
 
-To run the genetic algorithm use the `runGA` function (from the `GA` module) that takes a set of parameters as an argument. The set is the type of `GAParams` and contains parameters values for the genetic algoritm as well as the configuration for an induced grammar. The function returns the best found grammar as well as the best score (see the example above).
+To run the genetic algorithm, use the `runGA` function (from the `GA` module) that takes a set of parameters as an argument. The set is the type of `GAParams` and contains parameters values for the genetic algorithm and the configuration for an induced grammar. The function returns the best-found grammar as well as the best score (see the example above).
 
 ```fsharp
 type GAParams = {
