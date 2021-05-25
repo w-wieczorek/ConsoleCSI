@@ -16,14 +16,14 @@ You can install the library as the NuGet package, search the phrase: `ContextSen
 
 ```fsharp
 let parameters = {
-    pop_size = 200;
+    pop_size = 1000;
     tournament_size = 3;
     p_mutation = 0.01;
-    iterations = 10000;
-    verbose = 500;
+    iterations = 1000;
+    verbose = 200;
     rnd = Random();
-    grammar_size = 6;
-    variables = 4;
+    grammar_size = 5;
+    variables = 3;
     alphabet = ['a'; 'b'];
     examples = SortedSet ["ab"; "aabb"; "aaabbb"]
     counterexamples = SortedSet ["a"; "b"; "aa"; "bb"; "ba"; "abb"; "bba"; "abab"]
@@ -35,21 +35,23 @@ printfn $"\nwith bar = {bar}"
 
 ```
 [Output:]
-20: best bar = 7/16
-40: best bar = 7/16
-60: best bar = 7/16
-80: best bar = 7/16
-100: best bar = 7/16
-100: best bar = 7/16
-V0 V0 -> V0 V3
+200: best bar = 3/4
+400: best bar = 3/4
+600: best bar = 37/48
+800: best bar = 37/48
+1000: best bar = 37/48
+1000: best bar = 37/48
+V0 -> V0 V2
+V0 V0 -> V1 V2
 V1 -> a
-V2 V3 -> V2 V2
-V3 V0 -> V0 V2
-V3 V2 -> V1 V1
-V3 V3 -> V1 V1
+V1 -> b
+V1 V2 -> V0 V1
+V1 V2 -> V0 V2
+V2 -> V0 V2
+V2 V0 -> V1 V1
 
 
-with bar = 0,4375
+with bar = 0,7708333333333334
 ```
 
 ## Documentation
