@@ -45,7 +45,7 @@ with bar = 0,4375
 ## Documentation
 
 To run the genetic algorithm use the `runGA` function (from the `GA` module) that takes a set of parameters as an argument. The set is the type of `GAParams` and contains parameters values for the genetic algoritm 
-as well as the configuration for an induced grammar. The function returns the best found grammar as well as the best score.
+as well as the configuration for an induced grammar. The function returns the best found grammar as well as the best score (see the example above).
 
 ```fsharp
 type GAParams = {
@@ -62,15 +62,20 @@ type GAParams = {
     // Number of iteration for GA.
     iterations : int;
 
-    // If the verbose is set more than zero then the program will print the best individual in each _N_th iteration.
+    // If the verbose is set more than zero then the program will print the best individual
+    // in each n-th iteration.
     verbose : int;
 
     // Radomizer for genetic operators (the crossover and mutation), it must be the `Random` type.
     rnd : Random;
 
-
+    // ...
     grammar_size : int;
+
+    // ...
     variables : int;
+
+    // ...
     alphabet : char list;
 
     // The list of words that should be accepted by the result grammar.
