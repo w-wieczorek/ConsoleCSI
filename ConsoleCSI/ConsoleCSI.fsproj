@@ -4,6 +4,17 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>preview</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>WojciechWieczorek.ContextSensitiveGrammarInduction.GeneticSearch</PackageId>
+    <Authors>Wojciech Wieczorek</Authors>
+    <Company />
+    <Product>Context-Sensitive Grammar Induction by Genetic Search</Product>
+    <RepositoryUrl>https://github.com/w-wieczorek/ConsoleCSI</RepositoryUrl>
+    <Description>Libary that contains the genetic algorithm for context sensitive grammar induction.</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>context-sensitive grammar induction, genetic search, grammar induction</PackageTags>
+    <NeutralLanguage>Angielski</NeutralLanguage>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
