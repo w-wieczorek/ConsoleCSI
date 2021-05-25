@@ -6,6 +6,7 @@ This repository contains the genetic algorithm for context-sensitive language in
 
 The library contains two main modules: `Parsing` and `GA`. The former represents [a Type-1 grammar](https://en.wikipedia.org/wiki/Chomsky_hierarchy#Type-1_grammars) alongside helper functions.
 The latter is the implementation of [a genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) with all required [genetic operators](https://en.wikipedia.org/wiki/Genetic_algorithm#Genetic_operators).
+The library uses the steady state genetic algorithm (see the description below).
 
 ## Installation
 
@@ -67,7 +68,8 @@ type GAParams = {
     // Mutation rate for GA.
     p_mutation : float;
 
-    // Number of iteration for GA.
+    // Number of evaluations for GA (e.g. if the population size is 200 then one iteration
+    // is 200 evaluation, hence 2000 is 10 iterations in the classical meaning of an iteration).
     iterations : int;
 
     // If the verbose is set more than zero then the program will print the best individual
@@ -93,3 +95,9 @@ type GAParams = {
     counterexamples : SortedSet<string>
 }
 ```
+
+## Difference between the steady state genetic algorithm and the generational genetic algorithm
+
+> The steady state GA is a simpler version of the generational one and in it two parents are selected and crossed obtaining two offspring that are mutated and inserted in the population, whereas in the generational version a large portion of the population is selected and crossed (typically half the individuals), the resulting offspring is mutated and inserted into the population, thus replacing the old individuals.
+>
+> -- <cite>Andreu Sancho-Asensio, Universitat Ramon Llull</cite>
