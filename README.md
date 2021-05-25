@@ -53,7 +53,7 @@ with bar = 0,4375
 
 ## Documentation
 
-To run the genetic algorithm, use the `runGA` function (from the `GA` module) that takes a set of parameters as an argument. The set is the type of `GAParams` and contains parameters values for the genetic algorithm and the configuration for an induced grammar. The function returns the best-found grammar as well as the best score (see the example above).
+To run the genetic algorithm, use the `runGA` function (from the `GA` module) that takes a set of parameters as an argument. The set is the type of `GAParams` and contains parameters values for the genetic algorithm and the configuration for an induced grammar. The function returns the best-found grammar in [Kuroda normal form](https://en.wikipedia.org/wiki/Kuroda_normal_form) as well as [the best balanced accuracy](https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(classification_context)) (see the example above).
 
 ```fsharp
 type GAParams = {
