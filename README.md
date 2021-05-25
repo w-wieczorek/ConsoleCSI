@@ -15,7 +15,7 @@ let parameters = {
     tournament_size = 3;
     p_mutation = 0.01;
     iterations = 100;
-    verbose = 500;
+    verbose = 20;
     rnd = Random();
     grammar_size = 6;
     variables = 4;
@@ -30,13 +30,18 @@ printfn $"\nwith bar = {bar}"
 
 ```
 [Output:]
+20: best bar = 7/16
+40: best bar = 7/16
+60: best bar = 7/16
+80: best bar = 7/16
 100: best bar = 7/16
-V0 -> b
-V0 V0 -> V3 V0
-V0 V1 -> V2 V0
-V0 V3 -> V0 V0
-V2 V0 -> V2 V3
-V2 V1 -> V2 V0
+100: best bar = 7/16
+V0 V0 -> V0 V3
+V1 -> a
+V2 V3 -> V2 V2
+V3 V0 -> V0 V2
+V3 V2 -> V1 V1
+V3 V3 -> V1 V1
 
 
 with bar = 0,4375
@@ -62,7 +67,7 @@ type GAParams = {
     iterations : int;
 
     // If the verbose is set more than zero then the program will print the best individual
-    // in each n-th iteration.
+    // in each n-th and the last iteration.
     verbose : int;
 
     // Radomizer for genetic operators (the crossover and mutation), it must be the `Random` type.
