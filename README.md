@@ -71,7 +71,8 @@ type GAParams = {
     p_mutation : float;
 
     // Number of evaluations for GA (e.g. if the population size is 200 then one iteration
-    // is 200 evaluations, hence 2000 evaluations is 10 iterations in the classical meaning of an iteration).
+    // is 200 evaluations, hence 2000 evaluations is 10 iterations
+    // in the classical meaning of an iteration).
     iterations : int;
 
     // If the verbose is set more than zero then the program will print the best individual
