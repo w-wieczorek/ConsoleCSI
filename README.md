@@ -10,11 +10,17 @@ The library uses the steady state genetic algorithm (see the description below).
 
 ## Installation
 
-You can install the library as the NuGet package, search the phrase: `ContextSensitiveGrammarInduction.GeneticSearch` (package source: nuget.org).
+You can install the library as the NuGet package, search the phrase: `ContextSensitiveGrammarInduction.GeneticSearch` and use the version `1.0.1` (package source: nuget.org).
 
 ## Example of usage
 
 ```fsharp
+open System
+open GA
+open System.Collections.Generic
+
+...
+
 let parameters = {
     pop_size = 50;
     tournament_size = 3;
