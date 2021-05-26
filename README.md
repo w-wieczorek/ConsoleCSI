@@ -10,7 +10,7 @@ The library uses the steady state genetic algorithm (see the description below).
 
 ## Installation
 
-You can install the library as the NuGet package, search the phrase: `ContextSensitiveGrammarInduction.GeneticSearch` and use the version `1.0.1` (package source: nuget.org). The project should have selected the platform `netcoreapp3.1`.
+You can install the library as the NuGet package, search the phrase: `ContextSensitiveGrammarInduction.GeneticSearch` and use the version `1.0.1` (package source: nuget.org). You should have selected the platform `netcoreapp3.1` for your projects.
 
 ## Example of usage (F#)
 
