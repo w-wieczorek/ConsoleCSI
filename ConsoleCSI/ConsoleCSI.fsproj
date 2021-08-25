@@ -22,13 +22,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Library1.fs" />
-    <Compile Include="Library.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MathNet.Numerics.FSharp" Version="4.15.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GA\GA.fsproj" />
+    <ProjectReference Include="..\Parsing\Parsing.fsproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -49,7 +49,7 @@ let mutate (rnd : Random) (max_val : int) (ind : int list) : int list =
     let n = a.Length
     if n > 0 then
         let mutable r = rnd.Next(max_val)
-        while Array.BinarySearch(a, r) >= 0 do
+        while Array.IndexOf(a, r) >= 0 do
             r <- rnd.Next(max_val)
         a.[rnd.Next(n)] <- r
         a |> Array.sort |> Array.toList
